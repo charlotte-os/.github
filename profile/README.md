@@ -1,6 +1,6 @@
 # The Charlotte Project
 
-A Project with the goal of creating a novel open source modern (i.e. non-POSIX/SUS) operating system that is flexible, stable, secure, and easy to use and develop for.
+A project with the ambitious goal of creating a novel open source modern (i.e. non-POSIX/SUS) operating system that is flexible, stable, secure, and easy to use and develop for.
 
 Status: Very early development
 
