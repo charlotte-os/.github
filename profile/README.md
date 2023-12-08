@@ -6,7 +6,7 @@ Status: Very early development
 
 Subprojects:
 
-- CharlotteCore: The kernel of CharlotteOS
+- Catalyst: The kernel of CharlotteOS
   - Will provide a paravirtualized interface between applications and system hardware so that it can offer many of the benefits of an exokernel but with better security, stability, and fault tolerance
   - Most drivers will run in userspace and use privileged kernel APIs to have essentially the same level of access to system hardware as the kernel itself
   - Some drivers for common busses and hardware such as PCI Express, USB, and storage media will be built into the kernel though they can be removed at compile time via conditional compilation
