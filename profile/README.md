@@ -23,10 +23,11 @@ Subprojects:
 
 Notable Third-Party Components (Current and Planned):
 
+- Flanterm: A framebuffer terminal library
 - Limine: A modern bootloader with the ability to load 64-bit UEFI operating systems like CharlotteOS
 - lai: An ACPI Machine Language Interpreter
 - mlibc: A portable C standard library
 
 Licensing: 
 
-All software directly maintained by this project will be licensed under the latest version of the Mozilla Public License unless otherwise stated.
+All software directly maintained by this project will be licensed under the latest version of the GNU General Public License unless the repository for a subproject indicates otherwise.
