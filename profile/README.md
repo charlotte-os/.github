@@ -1,12 +1,12 @@
 # The Charlotte Project
 
-A project with the ambitious goal of creating a novel open source modern (i.e. non-POSIX/SUS) operating system that is flexible, stable, secure, and easy to use and develop for.
+A project with the ambitious goal of creating a novel modern (i.e. non-POSIX/SUS) open source operating system that is flexible, stable, secure, and easy to use and develop for.
 
 Status: Very early development
 
 Subprojects:
 
-- Catalyst: The kernel of CharlotteOS
+- CharlotteCore: The kernel of CharlotteOS
   - Will provide a paravirtualized interface between applications and system hardware so that it can offer many of the benefits of an exokernel but with better security, stability, and fault tolerance
   - Most drivers will run in userspace and use privileged kernel APIs to have essentially the same level of access to system hardware as the kernel itself
   - Some drivers for common busses and hardware such as PCI Express, USB, and storage media will be built into the kernel though they can be removed at compile time via conditional compilation
@@ -21,12 +21,9 @@ Subprojects:
   - Can delegate certain tasks to child processes launched with the necessary capabilities to perform them in order to provide better fault tolerance and separation of concerns
   - Provides the means to load kernel servers since they are userspace processes
 
-Notable Third-Party Components (Current and Planned):
+Notable Third-Party Components:
 
-- Flanterm: A framebuffer terminal library
-- Limine: A modern bootloader with the ability to load 64-bit UEFI operating systems like CharlotteOS
-- lai: An ACPI Machine Language Interpreter
-- mlibc: A portable C standard library
+- Limine: A modern bootloader with the ability to load 64-bit UEFI operating systems like The Charlotte Project
 
 Licensing: 
 
