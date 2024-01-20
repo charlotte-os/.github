@@ -23,7 +23,7 @@ Subprojects:
 
 Notable Third-Party Components:
 
-- Limine: A modern bootloader with the ability to load 64-bit UEFI operating systems like The Charlotte Project
+- Limine: A modern bootloader with the ability to load 64-bit UEFI operating systems like CharlotteOS
 
 Licensing: 
 
