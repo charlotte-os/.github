@@ -19,4 +19,4 @@ Notable Third-Party Components:
 
 Licensing: 
 
-All software directly maintained by this project will be licensed under the latest version of the GNU General Public License unless the repository for a subproject indicates otherwise.
+All software directly maintained by this project will be licensed under the latest version of the Mozilla Public License unless the repository for a subproject indicates otherwise.
