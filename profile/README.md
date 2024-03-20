@@ -16,7 +16,3 @@ Subprojects:
 Notable Third-Party Components:
 
 - Limine: A 64-bit UEFI bootloader with a modern boot protocol suitable for use by operating systems like CharlotteOS
-
-Licensing: 
-
-All software directly maintained by this project will be licensed under the latest version of the Mozilla Public License unless the repository for a subproject indicates otherwise.
