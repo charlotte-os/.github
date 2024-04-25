@@ -1,6 +1,6 @@
 # CharlotteOS
 
-A project with the ambitious goal of creating a novel modern (i.e. non-POSIX/SUS) open source operating system that is flexible, stable, secure, and easy to use and develop for.
+A project with the ambitious goal of creating a novel modern (i.e. non-POSIX/SUS) open source operating system that is flexible, high-performance, secure, and easy to use and develop for.
 
 Status: Very early development
 
