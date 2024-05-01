@@ -6,13 +6,11 @@ Status: Very early development
 
 Subprojects:
 
-- `Charlotte Core`: The kernel of CharlotteOS
+- `Catalyst`: The kernel of CharlotteOS
   - Modular Quasi-Exokernel
   - Will provide a paravirtualized interface between applications and system hardware so that it can offer many of the benefits of an exokernel but with better security, stability, and fault tolerance
   - Will only securely multiplex hardware resources and provide mechanisms to user space application with the appropriate capabilities
     - The kernel will enforce rules and policies decided upon by userspace however it will generally not impose any of its own
-- `Zenalloc`
-  - A library crate similar to the standard Rust `alloc` crate that is designed to never panic making it suitable for use in operating system kernels like Charlotte Core
 
 Notable Third-Party Components:
 
