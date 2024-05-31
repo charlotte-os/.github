@@ -10,13 +10,13 @@ CharlotteOS is built around three crucial design points:
 CharlotteOS will leverage these concepts to be a modern, open-source operating system that exemplifies all of security, performance, flexibility, and ease of use with no compromises. Processes will be heavily sandboxed, with inter-process communication primarily occurring through the kernel bus (kbus), a high-performance communication mechanism for both local and remote communication and the only means by which processes may exchange capabilities.
 
 Other tentatively planned features include:
-    • Widget-style GUI inspired by KDE Plasma 
-    • Dynamic Quantum Round Robin thread scheduling 
-    • Advanced memory management with processes able to control their own address spaces to a significant degree 
-    • Modular kernel architecture to support third party extensions and drivers
-    • Robust remote desktop capabilities
+- Widget-style GUI inspired by KDE Plasma 
+- Dynamic Quantum Round Robin thread scheduling 
+- Advanced memory management with processes able to control their own address spaces to a significant degree 
+- Modular kernel architecture to support third party extensions and drivers
+- Robust remote desktop capabilities
  
-CharlotteOS plans to offer a unique blend of low-level control for developers and system administrators and ease of use for normal users with the goal of meeting the needs of all of them.
+CharlotteOS plans to offer a unique combaination of low-level control for developers and system administrators and ease of use for normal users with the goal of meeting the needs of all three.
 
 We are actively seeking collaborators who share our vision of building this type of operating system. If you have expertise in OS development or system programming and want to help please join our discord server: 
 https://discord.gg/XPzJtqFVEe
