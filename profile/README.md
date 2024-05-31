@@ -13,7 +13,7 @@ Other tentatively planned features include:
 - Widget-style GUI inspired by KDE Plasma 
 - Dynamic Quantum Round Robin thread scheduling 
 - Advanced memory management with processes able to control their own address spaces to a significant degree 
-- Modular kernel architecture to support third party extensions and drivers
+- A hybrid kernel architecture to support third party OS extensions and drivers in userspace
 - Robust remote desktop capabilities
  
 CharlotteOS plans to offer a unique combaination of low-level control for developers and system administrators and ease of use for normal users with the goal of meeting the needs of all three.
