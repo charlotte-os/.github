@@ -27,11 +27,6 @@ feel free to open issues in any of our repositories or participate in the disuss
 
 Not yet but it would be ideal to create a centralized repository of developer knowledge some point soon to avoid the issues that come with relying on so called tribal knowledge.
 
-### History
-
-This project is the successor to the now defunct original CharlotteOS project and is run by some of the same people. We decided to start from scratch with the knowledge we gained from the prior attempt since it was the path of least resistance
-compared to attempting to refactor a proejct whose code was not organized well from the start and which was not designed with sufficient modularity and interface-implementation separation.
-
 ### Licensing
 
 All executables within this project are licensed under the GNU General Public License version 3 or later while libraries are licensed under the GNU Lesser General Public License version 3 or later. Individual repositories may also contain notices regarding specific exceptions to the requirements of the GPL 3.0 persuant to section 7 of the license which apply only to the repository in which they are placed.
