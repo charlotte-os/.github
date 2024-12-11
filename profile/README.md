@@ -1,10 +1,10 @@
-# CharlotteOS: Nova
+# CharlotteOS
 
 ## An Experimental Modern Operating System
 
 ### What the heck is this?
 
-`CharlotteOS: Nova` is an experimental attempt to create a much more modern operating system than those that are in common use today. It seeks to achieve this by incorporating several features that have been described
+`CharlotteOS` is an experimental attempt to create a much more modern operating system than those that are in common use today. It seeks to achieve this by incorporating several features that have been described
 in the operating systems research literature but thus far not used in any mainstream operating system despite providing clear advantages over their equivalents in the actual mainstream systems. Among these features are the following:
 
 - Capability based access control
@@ -15,7 +15,7 @@ in the operating systems research literature but thus far not used in any mainst
 - Graceful failure mechanisms that avoid total system failure to the extent possible by making any kernel function that can fail return a Result unless the error absolutely cannot be recovered from at all.
 - Intuitive and easy to use text based and graphical interfaces
 - Atomic update and installation transactions for all software including OS components with easy rollback
-- A pure monolithic kernel (Nova) which cannot be dynamically modified or extended in any way after it is compiled to prevent tampering and eliminate an entire category of security vulnerabilities and potential stability issues.
+- A pure monolithic kernel which cannot be dynamically modified or extended in any way after it is compiled to prevent tampering and eliminate an entire category of security vulnerabilities and potential stability issues.
 - others to be determined in the course of development
 
 ### How can I get involved?
