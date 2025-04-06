@@ -26,19 +26,19 @@ This table compares CharlotteOS to major existing operating systems across key a
 |------------------------------|-----------------------------|------------------------|--------------------------|--------------------------|------------------------|-------------------------|
 | **Kernel Architecture**       | Monolithic, exokernel-inspired | Hybrid              | Monolithic (modular)     | Monolithic               | Hybrid (XNU)           | Hybrid (custom)         |
 | **Boot Standard**             | UEFI + ACPI only            | UEFI + ACPI            | BIOS, UEFI, DT           | BIOS, UEFI               | UEFI + ACPI            | BIOS, UEFI (limited ACPI)|
-| **Init / Service Model**      | Executive-managed, async     | `wininit`, `svchost`   | `systemd`, `OpenRC` etc. | `rc`, `launchd` (Darwin) | `launchd`              | `launch_daemon`         |
-| **Filesystem Model**          | Volume-centric, no `/` root | Drive letters, NTFS    | Unix FS hierarchy        | Unix FS hierarchy        | APFS, Unix hierarchy   | BFS, simplified hierarchy|
-| **Syscall Interface**         | Charlotte-native             | Win32 / NT Native      | POSIX                    | POSIX                    | POSIX + Apple syscalls | BeOS-style syscalls     |
-| **Programming Model**         | Rust + async stdlib, clean C ABI | Win32, C/C++, .NET | POSIX, C/C++, Rust       | POSIX, C/C++             | Obj-C, Swift, POSIX    | C++, BeAPI              |
+| **Init / Service Model**      | `sys-executive`, async     | `wininit`, `svchost`   | `systemd`, `OpenRC` etc. | `rc`, `launchd` (Darwin) | `launchd`              | `launch_daemon`         |
+| **Filesystem Model**          | System Namespace with URI paths, Volume-centric FS subnamespace, no `/` root | Drive letters, NTFS    | Unix FS hierarchy        | Unix FS hierarchy        | APFS, Unix hierarchy   | BFS, simplified hierarchy|
+| **Syscall Interface**         | New CharlotteOS specific  | Win32 / NT Native      | POSIX                    | POSIX                    | POSIX + Apple syscalls | BeOS-style syscalls     |
+| **Programming Model**         | Rust idioms focused system libararies exposed via stable C ABI | Win32, C/C++, .NET | POSIX, C/C++, Rust       | POSIX, C/C++             | Obj-C, Swift, POSIX    | C++, BeAPI              |
 | **User/Kernel Separation**    | Strong, capability-enforced | Partial                | Strong, but mixed        | Strong                   | Strong                 | Moderate                |
 | **Security Model**            | Capability-based             | ACLs + Token-based     | DAC, SELinux, AppArmor   | DAC, MAC (optional)      | App Sandbox, SIP       | Basic permissions       |
-| **Concurrency Model**         | Async-first, thread hybrid   | Threads (preemptive)   | Threads + async options  | Threads                  | Threads + GCD/queues   | Preemptive threads      |
-| **Driver Model**              | Per-class user/kernel split  | Kernel-mode & UMDF     | Kernel-only (some FUSE)  | Kernel-only              | Kernel with sandboxing | Mostly kernel drivers   |
-| **Graphics Stack**            | Native protocol via userspace | DWM, DirectX           | Wayland, X11             | X11, some Wayland        | Metal, Quartz          | App Server (custom GUI) |
+| **Concurrency Model**         | Async-first, lightweight preemptive threading   | Threads (preemptive)   | Threads + async options  | Threads                  | Threads + GCD/queues   | Preemptive threads      |
+| **Driver Model**              | Kernel mode only but only abstract specific devices to a common interface for their device class which userspace must handle directly similar to an exokernel  | Kernel-mode & UMDF     | Kernel-only (some FUSE)  | Kernel-only              | Kernel with sandboxing | Mostly kernel drivers   |
+| **Graphics Stack**            | Custom set of APIs, compositing in-kernel             | DWM, DirectX           | Wayland, X11             | X11, some Wayland        | Metal, Quartz          | App Server (custom GUI) |
 | **Target Platforms**          | x86-64 only (for now)        | x86-64, ARM64          | x86, ARM, RISC-V, more   | x86, ARM (some)          | ARM64 (Apple Silicon)  | x86-64 (RISC-V WIP)     |
-| **Licensing**                 | GPLv3 or later               | Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
+| **Licensing**                 | GPLv3 or later (with proprietary driver clarification)| Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
 | **Backwards Compatibility**   | None (clean break)           | Heavy legacy (Win32)   | High POSIX & ABI support | High POSIX               | High legacy support    | Partial BeOS ABI        |
-| **Design Philosophy**         | Developer-first, secure, fast | Backward-compatible, mass-market | Flexibility, community-driven | Stability, correctness | UX-first, closed ecosystem | Simple desktop usability |
+| **Design Philosophy**         | Human centric, high stability, secure, and fast | Backward-compatible, mass-market | Flexibility, community-driven | Stability, correctness | UX-first, closed ecosystem | Simple desktop usability |
 
 
 ### How can I get involved?
