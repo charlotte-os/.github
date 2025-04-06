@@ -18,13 +18,13 @@ in the operating systems research literature but thus far not used in any mainst
 - A pure monolithic kernel which cannot be dynamically modified or extended in any way after it is compiled to prevent tampering and eliminate an entire category of security vulnerabilities and potential stability issues.
 - others to be determined in the course of development
 
-### How will is compare to other existing operating systems?
+### How will CharlotteOS compare to other existing operating systems?
 
 This table compares CharlotteOS to major existing operating systems across key architectural and design dimensions. It explains *why CharlotteOS exists* and how it differs fundamentally from Unix-based systems and proprietary OSes.
 
 | Feature / OS                  | **CharlotteOS**             | **Windows 11**         | **Linux**               | **BSDs**                | **macOS**              | **Haiku**               |
 |------------------------------|-----------------------------|------------------------|--------------------------|--------------------------|------------------------|-------------------------|
-| **Kernel Architecture**       | Monolithic, exokernel-inspired | Hybrid              | Monolithic (modular)     | Monolithic               | Hybrid (XNU)           | Hybrid (custom)         |
+| **Kernel Architecture**       | Pure Monolithic (Drivers can only be added or removed at compile time by design), exokernel-inspired driver model as system calls | Hybrid              | Monolithic (modular)     | Monolithic               | Hybrid (XNU)           | Hybrid (custom)         |
 | **Boot Standard**             | UEFI + ACPI only            | UEFI + ACPI            | BIOS, UEFI, DT           | BIOS, UEFI               | UEFI + ACPI            | BIOS, UEFI (limited ACPI)|
 | **Init / Service Model**      | `sys-executive`, async     | `wininit`, `svchost`   | `systemd`, `OpenRC` etc. | `rc`, `launchd` (Darwin) | `launchd`              | `launch_daemon`         |
 | **Filesystem Model**          | System Namespace with URI paths, Volume-centric FS subnamespace, no `/` root | Drive letters, NTFS    | Unix FS hierarchy        | Unix FS hierarchy        | APFS, Unix hierarchy   | BFS, simplified hierarchy|
@@ -33,7 +33,7 @@ This table compares CharlotteOS to major existing operating systems across key a
 | **User/Kernel Separation**    | Strong, capability-enforced | Partial                | Strong, but mixed        | Strong                   | Strong                 | Moderate                |
 | **Security Model**            | Capability-based             | ACLs + Token-based     | DAC, SELinux, AppArmor   | DAC, MAC (optional)      | App Sandbox, SIP       | Basic permissions       |
 | **Concurrency Model**         | Async-first, lightweight preemptive threading   | Threads (preemptive)   | Threads + async options  | Threads                  | Threads + GCD/queues   | Preemptive threads      |
-| **Driver Model**              | Kernel mode only but only abstract specific devices to a common interface for their device class which userspace must handle directly similar to an exokernel  | Kernel-mode & UMDF     | Kernel-only (some FUSE)  | Kernel-only              | Kernel with sandboxing | Mostly kernel drivers   |
+| **Driver Model**              | Kernel-mode only but driver only abstract specific devices to a common interface for their device class which userspace must handle directly similar to an exokernel based system  | Kernel-mode & UMDF     | Kernel-only (some FUSE)  | Kernel-only              | Kernel with sandboxing | Mostly kernel drivers   |
 | **Graphics Stack**            | Custom set of APIs, compositing in-kernel             | DWM, DirectX           | Wayland, X11             | X11, some Wayland        | Metal, Quartz          | App Server (custom GUI) |
 | **Target Platforms**          | x86-64 only (for now)        | x86-64, ARM64          | x86, ARM, RISC-V, more   | x86, ARM (some)          | ARM64 (Apple Silicon)  | x86-64 (RISC-V WIP)     |
 | **Licensing**                 | GPLv3 or later (with proprietary driver clarification)| Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
