@@ -18,6 +18,29 @@ in the operating systems research literature but thus far not used in any mainst
 - A pure monolithic kernel which cannot be dynamically modified or extended in any way after it is compiled to prevent tampering and eliminate an entire category of security vulnerabilities and potential stability issues.
 - others to be determined in the course of development
 
+### How will is compare to other existing operating systems?
+
+This table compares CharlotteOS to major existing operating systems across key architectural and design dimensions. It explains *why CharlotteOS exists* and how it differs fundamentally from Unix-based systems and proprietary OSes.
+
+| Feature / OS                  | **CharlotteOS**             | **Windows 11**         | **Linux**               | **BSDs**                | **macOS**              | **Haiku**               |
+|------------------------------|-----------------------------|------------------------|--------------------------|--------------------------|------------------------|-------------------------|
+| **Kernel Architecture**       | Monolithic, exokernel-inspired | Hybrid              | Monolithic (modular)     | Monolithic               | Hybrid (XNU)           | Hybrid (custom)         |
+| **Boot Standard**             | UEFI + ACPI only            | UEFI + ACPI            | BIOS, UEFI, DT           | BIOS, UEFI               | UEFI + ACPI            | BIOS, UEFI (limited ACPI)|
+| **Init / Service Model**      | Executive-managed, async     | `wininit`, `svchost`   | `systemd`, `OpenRC` etc. | `rc`, `launchd` (Darwin) | `launchd`              | `launch_daemon`         |
+| **Filesystem Model**          | Volume-centric, no `/` root | Drive letters, NTFS    | Unix FS hierarchy        | Unix FS hierarchy        | APFS, Unix hierarchy   | BFS, simplified hierarchy|
+| **Syscall Interface**         | Charlotte-native             | Win32 / NT Native      | POSIX                    | POSIX                    | POSIX + Apple syscalls | BeOS-style syscalls     |
+| **Programming Model**         | Rust + async stdlib, clean C ABI | Win32, C/C++, .NET | POSIX, C/C++, Rust       | POSIX, C/C++             | Obj-C, Swift, POSIX    | C++, BeAPI              |
+| **User/Kernel Separation**    | Strong, capability-enforced | Partial                | Strong, but mixed        | Strong                   | Strong                 | Moderate                |
+| **Security Model**            | Capability-based             | ACLs + Token-based     | DAC, SELinux, AppArmor   | DAC, MAC (optional)      | App Sandbox, SIP       | Basic permissions       |
+| **Concurrency Model**         | Async-first, thread hybrid   | Threads (preemptive)   | Threads + async options  | Threads                  | Threads + GCD/queues   | Preemptive threads      |
+| **Driver Model**              | Per-class user/kernel split  | Kernel-mode & UMDF     | Kernel-only (some FUSE)  | Kernel-only              | Kernel with sandboxing | Mostly kernel drivers   |
+| **Graphics Stack**            | Native protocol via userspace | DWM, DirectX           | Wayland, X11             | X11, some Wayland        | Metal, Quartz          | App Server (custom GUI) |
+| **Target Platforms**          | x86-64 only (for now)        | x86-64, ARM64          | x86, ARM, RISC-V, more   | x86, ARM (some)          | ARM64 (Apple Silicon)  | x86-64 (RISC-V WIP)     |
+| **Licensing**                 | GPLv3 or later               | Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
+| **Backwards Compatibility**   | None (clean break)           | Heavy legacy (Win32)   | High POSIX & ABI support | High POSIX               | High legacy support    | Partial BeOS ABI        |
+| **Design Philosophy**         | Developer-first, secure, fast | Backward-compatible, mass-market | Flexibility, community-driven | Stability, correctness | UX-first, closed ecosystem | Simple desktop usability |
+
+
 ### How can I get involved?
 
 Just clone any of the repositories in this organization, make a new branch and make your desired changes, then make a pull request and a maintainer will review it and either merge it or make a request for changes. You can also
