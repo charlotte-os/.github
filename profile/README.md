@@ -37,7 +37,7 @@ This table compares CharlotteOS to major existing operating systems across key a
 | **Graphics Stack**            | Custom set of APIs, compositing in-kernel             | DWM, DirectX           | Wayland, X11             | X11, some Wayland        | Metal, Quartz          | App Server (custom GUI) |
 | **Target Platforms**          | x86-64 only (for now)        | x86-64, ARM64          | x86, ARM, RISC-V, more   | x86, ARM (some)          | ARM64 (Apple Silicon)  | x86-64 (RISC-V WIP)     |
 | **Licensing**                 | GPLv3 or later (with proprietary driver clarification)| Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
-| **Backwards Compatibility**   | None (clean break)           | Heavy legacy (Win32)   | High POSIX & ABI support | High POSIX               | High legacy support    | Partial BeOS ABI        |
+| **Backwards Compatibility**   | Clean Break (native) & POSIX compatibility layer (via mlibc) | Heavy legacy (Win32)   | High POSIX & ABI support | High POSIX               | High legacy support    | Partial BeOS ABI        |
 | **Design Philosophy**         | Human centric, high stability, secure, and fast | Backward-compatible, mass-market | Flexibility, community-driven | Stability, correctness | UX-first, closed ecosystem | Simple desktop usability |
 
 
