@@ -36,7 +36,7 @@ This table compares CharlotteOS to major existing operating systems across key a
 | **Driver Model**              | Kernel-mode only but drivers only abstract specific devices to a common interface for their device class which userspace must handle directly similar to an exokernel based system  | Kernel-mode & UMDF     | Kernel-only (some FUSE)  | Kernel-only              | Kernel with sandboxing | Mostly kernel drivers   |
 | **Graphics Stack**            | Custom set of APIs, compositing in-kernel             | DWM, DirectX           | Wayland, X11             | X11, some Wayland        | Metal, Quartz          | App Server (custom GUI) |
 | **Target Platforms**          | x86-64 only (for now)        | x86-64, ARM64          | x86, ARM, RISC-V, more   | x86, ARM (some)          | ARM64 (Apple Silicon)  | x86-64 (RISC-V WIP)     |
-| **Licensing**                 | GPLv3 or later (with proprietary driver clarification)| Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
+| **Licensing**                 | AGPLv3 or later (with proprietary driver clarification)| Proprietary            | GPL, MIT, etc.           | BSD, ISC                 | Proprietary            | MIT                     |
 | **Backwards Compatibility**   | Clean Break (native) & POSIX compatibility layer (via mlibc) | Heavy legacy (Win32)   | High POSIX & ABI support | High POSIX               | High legacy support    | Partial BeOS ABI        |
 | **Design Philosophy**         | Human centric, high stability, secure, and fast | Backward-compatible, mass-market | Flexibility, community-driven | Stability, correctness | UX-first, closed ecosystem | Simple desktop usability |
 
@@ -52,7 +52,7 @@ Not yet but it would be ideal to create a centralized repository of developer kn
 
 ### Licensing
 
-All executables within this project are licensed under the GNU General Public License version 3 or later while libraries are licensed under the GNU Lesser General Public License version 3 or later. Individual repositories may also contain notices regarding specific exceptions to the requirements of the GPL 3.0 persuant to section 7 of the license which apply only to the repository in which they are placed.
+All executables within this project are licensed under the GNU Affero General Public License version 3 or later while libraries are licensed under the GNU Lesser General Public License version 3 or later. Individual repositories may also contain notices regarding specific exceptions to the requirements of the AGPL 3.0 persuant to section 7 of the license which apply only to the repository in which they are placed.
 
 If you do not wish to license your
 contributions under these terms then please do not contribute. We consider the strong copyleft license to be a feature of our project as much as any functionality of the software itself.
